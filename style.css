@@ -1,80 +1,242 @@
 @font-face {
-    font-family: d;
-    src: url(./Assets/fonts/D-DIN.woff2);
+  font-family: d;
+  src: url(./Assets/fonts/D-DIN.woff2);
 }
 
 @font-face {
-    font-family: db;
-    src: url(./Assets/fonts/D-DIN-Bold.woff2);
+  font-family: db;
+  src: url(./Assets/fonts/D-DIN-Bold.woff2);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: d;
-    color: #fff;
-    background: #000;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: d;
+  color: #fff;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
-.d-flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.d-flex-c{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.d-flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #loader{
-    height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  z-index: 999;
+  position: absolute;
+}
+
+#loader-texts{
+  height: 100%;
+  width: 100%;
+  justify-content: start;
+  gap: 2.5vw;
+  padding: 1vw;
+  font-size: 1.4vw;
+  position: absolute;
+}
+
+.text-loader {
+  opacity: 0;
+}
+
+.text-27 {
+  margin-left: 15vw;
+}
+
+.text-54 {
+  margin-left: 15vw;
+}
+
+.text-97 {
+  margin-left: 19vw;
+  margin-right: 3vw;
+}
+
+.loading-p {
+  height: 100%;
+  width: 100%;
+  font-size: 1.4rem;
+  gap: 0.6vw;
+  opacity: 0;
+  position: absolute;
+}
+
+.center-p2 {
+  margin-left: 5vw;
+  opacity: 0;
+}
+
+.center-p2 svg {
+  height: 3rem;
+}
+
+
+.c-scrollbar{
+    width: 1px;
+}
+
+#nav{
+    height: 70px;
     width: 100%;
-    position: absolute;
-    justify-content: start;
-    gap: 2.5vw;
-    padding: 1vw;
-    font-size: 1.4vw;
-    /* z-index: 9999; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 99;
+    position: fixed;
+    background-color: transparent;
+    top: 0;
+    padding: 0 2vw;
 }
 
-.text-loader{
-    opacity: 0;
+#nav-logo{
+  background: transparent;
 }
 
-.text-27{
-    margin-left: 15vw;
+#nav-logo svg{
+ height: 18px;  
+ background-color: transparent;
 }
 
-.text-54{
-    margin-left: 15vw;
+#nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6vw;
+    gap: 2vw;
+    background-color: transparent;
 }
 
-.text-97{
-    margin-left: 19vw;
-    margin-right: 3vw;
+#nav-links a{
+    text-decoration: none;
+    background-color: transparent;
 }
 
-.loading-p{
-    height: 100vh;
-    width: 100%;
-    font-size: 1.4vw;
-    gap: 0.6vw;
+#nav i{
+    font-size: 1.8vw;
+    background-color: transparent;
 }
 
-.center-p2{
-    margin-left: 5vw;
-    opacity: 0;
+#super-main{
+  background: #000;
 }
 
-.center-p2 svg{
-    height: 48px;
+#main{
+  background-color: #000;
+}
+
+.video-div{
+  clip-path: circle(var(--clip) at 50% 50%);
+  z-index: 3;
+}
+
+.video-div video{
+    z-index: 3;
+}
+
+.video-content{
+  position: absolute;
+  z-index: 3;
+  bottom: 3vw;
+  left: 3vw;
+  width: 27%;
+}
+
+.video-content h2{
+  font-size: 2.2vw;
+  font-family: db;
+  font-stretch: extra-condensed;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.video-content p{
+  font-size: 1.3vw;
+  margin-top: 1.6vw;
+}
+
+.video-content h3{
+  margin-top: 1vw;
+  font-family: db;
+  font-size: 1.5vw;
+}
+
+.home-container{
+  z-index: 2;
+  position: relative;
+}
+
+.home-scroll{
+  z-index: 3;
+}
+
+.text-content{
+    width: 84%;
+    font-size: 1rem;
+    top: 13vw;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+.text-content p{
+    background-color: transparent;
+    width:100%;
+}
+
+.home-content{
+  position: absolute;
+  top: 12vw;
+  left: 2vw;
+  /* background: #000; */
+  width: 36%;
+}
+
+.home-content h2{
+  font-size: 3.2vw;
+  font-family: db;
+  font-stretch: extra-condensed;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home-content p{
+  font-size: 1.2vw;
+  margin: 1.6vw 0;
+}
+
+.home-content button{
+  padding: 10px 30px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-family: db;
+  font-weight: 900;
+}
+
+#page2{
+  height: 100vh;
+  width: 100%;
+
 }
