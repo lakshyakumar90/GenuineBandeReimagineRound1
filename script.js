@@ -1,5 +1,5 @@
-function loco(){
-    gsap.registerPlugin(ScrollTrigger);
+function loco() {
+  gsap.registerPlugin(ScrollTrigger);
 
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
@@ -11,7 +11,7 @@ function loco(){
       return arguments.length
         ? locoScroll.scrollTo(value, 0, 0)
         : locoScroll.scroll.instance.scroll.y;
-    }, 
+    },
     getBoundingClientRect() {
       return {
         top: 0,
@@ -31,7 +31,7 @@ function loco(){
 function loader() {
   let tl = gsap.timeline();
 
-document.body.style.overflow = "hidden"
+  document.body.style.overflow = "hidden";
 
   tl.to(".text-loader", {
     opacity: 1,
@@ -47,64 +47,96 @@ document.body.style.overflow = "hidden"
     display: "none",
   });
 
-  tl.to(".loading-p",{
+  tl.to(
+    ".loading-p",
+    {
       opacity: 1,
-    },"a");
+    },
+    "a"
+  );
 
-  tl.to(".center-p1",{
+  tl.to(
+    ".center-p1",
+    {
       onStart: function () {
-        $(".center-p1").scramble(2000, 20, "alphabet", true);
+        $(".center-p1").scramble(1500, 40, "alphabet", true);
       },
-    },"a");
+    },
+    "a"
+  );
 
   tl.to(".center-p2", {
     opacity: 1,
-    delay: 2,
+    delay: 0.9,
     duration: 1,
   });
 
-  tl.to("#loader", {
-    duration: 1.5,
-    delay: 0.1,
-    ease: "power5",
-    opacity: 0,
-    display:"none"
-  },'b');
+  tl.to(
+    "#loader",
+    {
+      duration: 1.5,
+      delay: 0.1,
+      ease: "power5",
+      opacity: 0,
+      display: "none",
+    },
+    "b"
+  );
 
-  tl.from("#main", {
-    y: 1600,
-    opacity: 0,
-    duration: 1.5,
-  },'b');
+  tl.from(
+    "#main",
+    {
+      y: 1600,
+      opacity: 0,
+      duration: 1.5,
+    },
+    "b"
+  );
 
-  tl.to("body",{
+  tl.to("body", {
     overflow: "visible",
-  })
-
+  });
 }
 
-function home(){
-  let tl =  gsap.timeline()
+function home() {
+  gsap.set(".marquee",{
+    scale:5
+  })
 
-  tl.to(".video-div",{
-    scrollTrigger:{
-      trigger:"#home",
-      scroller:"#main",
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#home",
+      scroller: "#main",
       start: "top top",
-      end: "bottom top",
-      pin:true,
-      scrub:2
+      end: "+=1300",
+      pin: true,
+      scrub: 2,
     },
+  });
+
+  tl.to(".video-div", {
     "--clip": "0%",
     ease: Power2,
-    duration:5
-  })
+  },'a')
 
+  .to(".marquee",{
+    scale:1,
+    ease:Power2
+  },'a')
+
+  .to(".left",{
+    xPercent: -10,
+    ease:Power4,
+    stagger:.04
+  },'b')
+
+  .to(".right",{
+    xPercent: 10,
+    ease:Power4,
+    stagger:.04
+  },'b')
 }
 
-
-
-
-loader()
-loco()  
-home()
+loader();
+loco();
+home();
