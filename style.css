@@ -718,3 +718,65 @@
     object-fit: cover;
     object-position: 30%;
   }
+  #page5 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 3vw;
+  }
+  
+  #page5 h1 {
+    font-family: pp;
+    font-size: 5vw;
+    line-height: 1.3;
+  }
+  
+  .vehicle-container {
+    padding-top: 4vw;
+  }
+  
+  .vehicle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 5vw;
+  }
+  
+  .vehicle-content {
+    width: 40%;
+  }
+  
+  .vehicle-content h3 {
+    font-size: 3vw;
+    line-height: 1;
+  }
+  
+  .vehicle-content p {
+    margin: 2vw 0;
+  }
+  
+  .vehicle-content button {
+    border: 2px solid #fff;
+    padding: 6px 20px;
+  }
+  
+  .vehicle-media {
+    width: 50%;
+  }
+  
+  .vehicle-media img,
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .vehicle .text-right {
+    right: 5%;
+    text-align: left;
+  }
+  
+  .starship-img img {
+    width: 80%;
+  }
