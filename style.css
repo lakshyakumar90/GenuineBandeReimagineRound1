@@ -341,4 +341,53 @@
     object-fit: cover;
     object-position: center;
   }
+
+  #page2 {
+    width: 100%;
+    padding: 5vw 3vw;
+    border-top: 1px solid #ffffff88;
+    border-bottom: 1px solid #ffffff88;
+  }
+  
+  #page2 h1 {
+    font-family: pp;
+    font-size: 5vw;
+    line-height: 1.3;
+  }
+  
+  #page2 h2 {
+    font-family: pp;
+    font-size: 3vw;
+    line-height: 1.2;
+  }
+  
+  .card-container {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4vw;
+  }
+  
+  .card {
+    height: 44vw;
+    width: 32%;
+  }
+  
+  .card .card-img {
+    height: 84%;
+    width: 100%;
+  }
+  
+  .card-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .card-overlay h3 {
+    margin: 1vw 0 0.2vw 0;
+  }
   
