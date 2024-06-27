@@ -1,26 +1,26 @@
 @font-face {
     font-family: d;
-    src: url(./Assets/fonts/D-DIN.woff2);
+    src: url(./Assets/fonts/D-DIN.ttf);
   }
   
   @font-face {
     font-family: db;
-    src: url(./Assets/fonts/D-DIN-Bold.woff2);
+    src: url(./Assets/fonts/D-DIN-Bold.ttf);
   }
   
   @font-face {
     font-family: pp;
-    src: url(./Assets/fonts/659dbdfd5a080be8d348316f_PPNeueMachina_\ Light.woff);
+    src: url(./Assets/fonts/659dbdfd5a080be8d348316f_PPNeueMachina_\ Light.ttf);
   }
   
   @font-face {
     font-family: neuem;
-    src: url(./Assets/fonts/neuedisplaymed.woff);
+    src: url(./Assets/fonts/neuedisplaymed.ttf);
   }
   
   @font-face {
     font-family: neueb;
-    src: url(./Assets/fonts/neuedisplaybold.woff);
+    src: url(./Assets/fonts/neuedisplaybold.ttf);
   }
   
   * {
