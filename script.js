@@ -375,7 +375,9 @@ function page6() {
 }
 
 loco();
-loader();
+if(window.innerWidth > 768){
+  loader();
+}
 home();
 page3();
 magnet(
