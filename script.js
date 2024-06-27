@@ -254,6 +254,50 @@ function magnet(string) {
   hoverMouse($(string));
 }
 
+function page4() {
+    if(window.innerWidth > 768){
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#launches",
+            scroller: "#main",
+            pin: true,
+            start: "top 70px",
+            end: "bottom bottom",
+            endTrigger: ".last",
+            scrub: 1,
+          },
+        });
+      
+        tl.to(
+          ".lleftelm",
+          {
+            yPercent: -500,
+            ease: Power1,
+          },
+          "a"
+        );
+      
+        let sections = document.querySelectorAll(".lleftelm");
+        Shery.imageEffect(".limg", {
+          style: 3,
+          config: {"resolutionXY":{"value":100},"distortion":{"value":true},"mode":{"value":-3},"mousemove":{"value":2},"modeA":{"value":1},"modeN":{"value":0},"speed":{"value":-0.64,"range":[-500,500],"rangep":[-10,10]},"frequency":{"value":50,"range":[-800,800],"rangep":[-50,50]},"angle":{"value":0.5,"range":[0,3.141592653589793]},"waveFactor":{"value":1.4,"range":[-3,3]},"color":{"value":10212607},"pixelStrength":{"value":3,"range":[-20,100],"rangep":[-20,20]},"quality":{"value":5,"range":[0,10]},"contrast":{"value":1,"range":[-25,25]},"brightness":{"value":1,"range":[-1,25]},"colorExposer":{"value":0.18,"range":[-5,5]},"strength":{"value":0.2,"range":[-40,40],"rangep":[-5,5]},"exposer":{"value":8,"range":[-100,100]},"zindex":{"value":"999","range":[-9999999,9999999]},"aspect":{"value":0.7782667085750207},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":false},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":false},"maskVal":{"value":1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0.002,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}},
+          slideStyle: (setScroll) => {
+            sections.forEach(function (section, index) {
+              ScrollTrigger.create({
+                trigger: section,
+                scroller: "#main",
+                start: "top top",
+                scrub: 1,
+                onUpdate: function (prog) {
+                  setScroll(prog.progress + index);
+                },
+              });
+            });
+          },
+        });
+      }
+    }
+
 loco();
 loader();
 home();
@@ -261,3 +305,4 @@ page3();
 magnet(
   ".slide1-img, .img1, .img2, .img3, .s3img1, .s3img2, .s3img3, .s4img1, .s4img2, .s4img3"
 );
+page4();

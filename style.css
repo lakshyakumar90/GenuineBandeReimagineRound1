@@ -653,4 +653,68 @@
   .s4img3 {
     cursor: pointer;
   }
+
+  #page4 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 12vw;
+    border-bottom: 1px solid #ffffff88;
+  }
   
+  #page4-heading h1 {
+    font-family: pp;
+    font-size: 6vw;
+    line-height: 1;
+  }
+  
+  #launches {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vw;
+  }
+  
+  .lleft {
+    overflow: hidden;
+    width: 52%;
+    height: 84vh;
+  }
+  
+  .lleftelm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 1vw;
+    height: inherit;
+  }
+  
+  .lleftelm h3 {
+    font-size: 1.5vw;
+  }
+  
+  .lleftelm h2 {
+    font-size: 2.2vw;
+    font-family: pp;
+  }
+  
+  .lleftelm p {
+    font-size: 1.2vw;
+  }
+  
+  .lright {
+    width: 41%;
+    height: 84vh;
+  }
+  
+  .limg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .limg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30%;
+  }
