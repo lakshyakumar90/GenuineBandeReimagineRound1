@@ -334,3 +334,4 @@ magnet(
   ".slide1-img, .img1, .img2, .img3, .s3img1, .s3img2, .s3img3, .s4img1, .s4img2, .s4img3"
 );
 page4();
+page6();
