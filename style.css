@@ -780,3 +780,57 @@
   .starship-img img {
     width: 80%;
   }
+  #page6 {
+    width: 100%;
+    position: relative;
+    padding: 5vw 3vw;
+    border-top: 1px solid #ffffff88;
+  }
+  
+  #page6 > h1 {
+    font-size: 6vw;
+    line-height: 1;
+    font-family: pp;
+    margin-bottom: 5vw;
+  }
+  
+  .executive {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 1vw 2vw 0;
+    border-top: 1px solid #ffffff88;
+    cursor: pointer;
+  }
+  
+  .executive:nth-last-child(1) {
+    border-bottom: 1px solid #ffffff88;
+  }
+  
+  .executive > h1 {
+    font-size: 3vw;
+    font-family: pp;
+    color: #ffffffa1;
+  }
+  
+  .executive h5 {
+    color: #ffffffa1;
+  }
+  
+  .exe-img {
+    height: 17vw;
+    width: 23vw;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .exe-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
